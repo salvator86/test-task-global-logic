@@ -1,0 +1,10 @@
+<div class="container-sm filter">
+  <mat-form-field class="filter__select">
+    <mat-label>Select filter option</mat-label>
+    <mat-select (selectionChange)="setOrderEmitter.emit($event.value)">
+      <mat-option *ngFor="let order of orders" [value]="order">
+        {{order}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

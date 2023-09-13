@@ -1,0 +1,9 @@
+<div class="video" (click)="onGetVideo()">
+  <div class="video__image" *ngIf="!isVideoActive">
+    <img [src]="videoItem.snippet.thumbnails.medium.url"
+         alt="video's image">
+  </div>
+  <div *ngIf="isVideoActive" [innerHTML]="video" class="video__player"></div>
+  <p class="video__title">{{videoItem.snippet.title}}</p>
+</div>
+
